@@ -1,0 +1,910 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GajahGrip - Ban Premium dengan Cengkeraman Terbaik</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css">
+</head>
+<body>
+    <!-- Header dengan video background -->
+    <header class="main-header" id="Beranda">
+        <div class="video-background">
+            <video autoplay muted loop playsinline preload="auto" id="hero-video">
+                <source src="https://www.gt-tires.com//wp-content/uploads/2023/09/gt_compressed.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <div class="video-overlay"></div>
+            </div>
+        </div>
+        
+        <!-- Navbar -->
+        <nav class="navbar">
+            <div class="nav-container container">
+                <div class="nav-logo">
+                    <div class="logo-icon">
+                        <i class="fas fa-paw"></i>
+                    </div>
+                    <h1>GajahGrip</h1>
+                </div>
+                <div class="nav-menu" id="nav-menu">
+                    <ul class="nav-list">
+                        <li class="nav-item"><a href="#Beranda" class="nav-link active" data-i18n="nav.home">Beranda</a></li>
+                        <li class="nav-item"><a href="#produk" class="nav-link" data-i18n="nav.products">Produk</a></li>
+                        <li class="nav-item"><a href="#teknologi" class="nav-link" data-i18n="nav.technology">Teknologi</a></li>
+                        <li class="nav-item"><a href="#testimoni" class="nav-link" data-i18n="nav.testimonials">Testimoni</a></li>
+                        <li class="nav-item"><a href="#tentang" class="nav-link" data-i18n="nav.about">Tentang</a></li>
+                        <li class="nav-item"><a href="#kontak" class="nav-link" data-i18n="nav.contact">Kontak</a></li>
+                        <!-- Language Selector -->
+                        <li class="nav-item language-selector">
+                            <div class="language-dropdown">
+                                <button class="language-toggle" id="language-toggle">
+                                    <i class="fas fa-globe"></i>
+                                    <span id="current-language">ID</span>
+                                    <i class="fas fa-chevron-down"></i>
+                                </button>
+                                <div class="language-menu" id="language-menu">
+                                    <button class="language-option" data-lang="id">
+                                        <span class="flag-icon">🇮🇩</span>
+                                        <span>Bahasa Indonesia</span>
+                                    </button>
+                                    <button class="language-option" data-lang="en">
+                                        <span class="flag-icon">🇺🇸</span>
+                                        <span>English</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="nav-toggle">
+                    <button class="hamburger" id="hamburger">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                </div>
+            </div>
+        </nav>
+        
+        <!-- Hero Section -->
+        <div class="hero-section">
+            <div class="hero-content container">
+                <h1 class="hero-title">
+                    <span class="title-line" data-i18n="hero.title1">Cengkeraman Kuat</span>
+                    <span class="title-line" data-i18n="hero.title2">Seperti Gajah</span>
+                </h1>
+                <p class="hero-subtitle" data-i18n="hero.subtitle">Teknologi ban terdepan dengan performa maksimal di segala medan.</p>
+                <p data-i18n="hero.subtitle2">Keamanan dan kenyamanan dalam genggaman Anda.</p>
+                <div class="hero-stats">
+                    <div class="stat">
+                        <span class="stat-number" data-count="98">0</span>
+                        <span class="stat-label" data-i18n="hero.stat1">Kepuasan Pelanggan</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number" data-count="15">0</span>
+                        <span class="stat-label" data-i18n="hero.stat2">Tahun Garansi</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number" data-count="500">0</span>
+                        <span class="stat-label" data-i18n="hero.stat3">Ribuan Pelanggan</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Scroll Indicator -->
+        <div class="scroll-indicator" id="scroll-indicator">
+            <div class="scroll-line">
+                <div class="scroll-progress"></div>
+            </div>
+            <span data-i18n="hero.scroll">Scroll untuk Menjelajahi</span>
+        </div>
+    </header>
+
+    <!-- Produk Section -->
+    <section class="products-section" id="produk">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title" data-i18n="products.title">Produk Unggulan Kami</h2>
+                <p class="section-subtitle" data-i18n="products.subtitle">Temukan ban terbaik untuk kendaraan Anda dengan teknologi terkini dari GajahGrip</p>
+            </div>
+            
+            <div class="product-filters">
+                <div class="filter-group">
+                    <button class="filter-btn active" data-filter="all" data-i18n="products.filter.all">Semua Produk</button>
+                    <button class="filter-btn" data-filter="passenger" data-i18n="products.filter.passenger">Penumpang</button>
+                    <button class="filter-btn" data-filter="suv" data-i18n="products.filter.suv">SUV & MPV</button>
+                    <button class="filter-btn" data-filter="truck" data-i18n="products.filter.truck">Truk & Bus</button>
+                    <button class="filter-btn" data-filter="performance" data-i18n="products.filter.performance">Performance</button>
+                </div>
+                <div class="filter-group">
+                    <div class="sort-select">
+                        <select id="sort-products">
+                            <option value="default" data-i18n="products.sort.default">Urutkan: Default</option>
+                            <option value="zeneos">Zeneos</option>
+                            <option value="gtradial">GT Radial</option>
+                            <option value="gt-tires">GT Tires</option>
+                            <option value="giti">Giti</option>
+                            <option value="irc">IRC</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="product-grid" id="product-grid">
+                <!-- Product 1 -->
+                <div class="product-card" data-category="passenger" data-brand="giti" data-id="1">
+                    <div class="product-badge1" data-i18n="products.badge.bestseller">Best Seller</div>
+                    <div class="product-image">
+                        <img src="https://www.giti.com.sg/storage/images/product-sliders/giticontrol-p10/ChinaPattern001231/CTR_ChinaPattern001231_3__20211123102527.png" alt="GajahGrip Premium GT" loading="lazy">
+                        <div class="product-overlay">
+                            <button class="btn-quick-view" data-id="1">
+                                <i class="fas fa-eye"></i> <span data-i18n="products.quickview">Quick View</span>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-title">GitiControl P10</h3>
+                        <p class="product-description" data-i18n="products.description.1">Ban berperforma sangat tinggi memberikan pengendaraan yang nyaman dan senyap.</p>
+                        <div class="product-specs">
+                            <div class="spec-item">
+                                <i class="fas fa-road"></i>
+                                <span data-i18n="products.specs.allseason">All Season</span>
+                            </div>
+                            <div class="spec-item">
+                                <i class="fas fa-volume-down"></i>
+                                <span data-i18n="products.specs.quiet">Rendah Bising</span>
+                            </div>
+                        </div>
+                        <div class="product-price">
+                            <span class="price">Rp 1.300.000</span>
+                            <span class="price-old">Rp 1.500.000</span>
+                        </div>
+                        <div class="product-actions">
+                            <button class="btn-beli" data-id="1" data-i18n="products.buy">Beli Sekarang</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 2 -->
+                <div class="product-card" data-category="suv" data-brand="gtradial" data-id="2">
+                    <div class="product-badge1" data-i18n="products.badge.bestseller">Best Seller</div>
+                    <div class="product-image">
+                        <img src="https://www.gt-tires.com/tires/IndonesiaTireMidPhoto_2021823203156.png" alt="gtradial" loading="lazy">
+                        <div class="product-overlay">
+                            <button class="btn-quick-view" data-id="2">
+                                <i class="fas fa-eye"></i> <span data-i18n="products.quickview">Quick View</span>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-title">CHAMPIRO SX-R</h3>
+                        <p class="product-description" data-i18n="products.description.2">CHAMPIRO SX-R adalah generasinya selanjutnya dari ban  sport ultra high performance yang dirancang untuk memberikan traksi dan stabilitas maksimal di berbagai kondisi jalan.</p>
+                        <div class="product-specs">
+                            <div class="spec-item">
+                                <i class="fas fa-mountain"></i>
+                                <span data-i18n="products.specs.allterrain">All Terrain</span>
+                            </div>
+                            <div class="spec-item">
+                                <i class="fas fa-shield-alt"></i>
+                                <span data-i18n="products.specs.durable">Tahan Lama</span>
+                            </div>
+                        </div>
+                        <div class="product-price">
+                            <span class="price">Rp 1.250.000</span>
+                            <span class="price-old">Rp 1.450.000</span>
+                        </div>
+                        <div class="product-actions">
+                            <button class="btn-beli" data-id="2" data-i18n="products.buy">Beli Sekarang</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 3 -->
+                <div class="product-card" data-category="performance" data-brand="zeneos" data-id="3">
+                    <div class="product-badge1" data-i18n="products.badge.bestseller">Best Seller</div>
+                    <div class="product-image">
+                        <img src="https://www.static-src.com/wcsstore/Indraprastha/images/catalog/full//94/MTA-2976303/zeneos_zeneos-zn-62-80-80-r17-ban-motor_full03.jpg" alt="Zeneos XT3000" loading="lazy">
+                        <div class="product-overlay">
+                            <button class="btn-quick-view" data-id="3">
+                                <i class="fas fa-eye"></i> <span data-i18n="products.quickview">Quick View</span>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-title">Zeneos XT3000</h3>
+                        <p class="product-description" data-i18n="products.description.3">Desain ban yang memadukan penampilan yang sporty dengan performa yang maksimal</p>
+                        <div class="product-specs">
+                            <div class="spec-item">
+                                <i class="fas fa-tachometer-alt"></i>
+                                <span data-i18n="products.specs.highspeed">High Speed</span>
+                            </div>
+                            <div class="spec-item">
+                                <i class="fas fa-hand-rock"></i>
+                                <span data-i18n="products.specs.highgrip">Grip Tinggi</span>
+                            </div>
+                            <div class="spec-item">
+                                <i class="fas fa-bolt"></i>
+                                <span data-i18n="products.specs.responsive">Responsif</span>
+                            </div>
+                        </div>
+                        <div class="product-price">
+                            <span class="price">Rp 516.500</span>
+                            <span class="price-old">Rp 750.000</span>
+                        </div>
+                        <div class="product-actions">
+                            <button class="btn-beli" data-id="3" data-i18n="products.buy">Beli Sekarang</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 4 -->
+                <div class="product-card" data-category="passenger" data-brand="gtradial" data-id="4">
+                    <div class="product-badge" data-i18n="products.badge.comfort">Nyaman</div>
+                    <div class="product-image">
+                        <img src="https://www.gt-tires.com/tires/IndonesiaTireMidPhoto_202343171146.png" alt="GT Radial Champiro" loading="lazy">
+                        <div class="product-overlay">
+                            <button class="btn-quick-view" data-id="4">
+                                <i class="fas fa-eye"></i> <span data-i18n="products.quickview">Quick View</span>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-title">GT Radial Champiro</h3>
+                        <p class="product-description" data-i18n="products.description.4">
+                            Ban penumpang dengan keseimbangan sempurna antara kenyamanan, keamanan, dan keawetan.
+                            Cocok untuk penggunaan sehari-hari di perkotaan.
+                        </p>
+                        <div class="product-specs">
+                            <div class="spec-item">
+                                <i class="fas fa-road"></i>
+                                <span data-i18n="products.specs.allseason">All Season</span>
+                            </div>
+                            <div class="spec-item">
+                                <i class="fas fa-volume-down"></i>
+                                <span data-i18n="products.specs.quiet">Rendah Bising</span>
+                            </div>
+                        </div>
+                        <div class="product-price">
+                            <span class="price">Rp 750.000</span>
+                            <span class="price-old">Rp 850.000</span>
+                        </div>
+                        <div class="product-actions">
+                            <button class="btn-beli" data-id="4" data-i18n="products.buy">Beli Sekarang</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 5 -->
+                <div class="product-card" data-category="passenger" data-brand="gt-tires" data-id="5">
+                    <div class="product-badge" data-i18n="products.badge.comfort">Nyaman</div>
+                    <div class="product-image">
+                        <img src="https://www.gt-tires.com/tires/IndonesiaTireMidPhoto_2016510111150.png" alt="GT Tires Savero" loading="lazy">
+                        <div class="product-overlay">
+                            <button class="btn-quick-view" data-id="5">
+                                <i class="fas fa-eye"></i> <span data-i18n="products.quickview">Quick View</span>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-title">GT Tires Savero</h3>
+                        <p class="product-description" data-i18n="products.description.5">Ban hemat bahan bakar dengan kenyamanan berkendara maksimal dan umur panjang. Menggunakan kompon khusus untuk mengurangi rolling resistance.</p>
+                        <div class="product-specs">
+                            <div class="spec-item">
+                                <i class="fas fa-couch"></i>
+                                <span data-i18n="products.specs.comfort">Nyaman</span>
+                            </div>
+                            <div class="spec-item">
+                                <i class="fas fa-leaf"></i>
+                                <span data-i18n="products.specs.eco">Ramah Lingkungan</span>
+                            </div>
+                        </div>
+                        <div class="product-price">
+                            <span class="price">Rp 720.000</span>
+                            <span class="price-old">Rp 820.000</span>
+                        </div>
+                        <div class="product-actions">
+                            <button class="btn-beli" data-id="5" data-i18n="products.buy">Beli Sekarang</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 6 -->
+                <div class="product-card" data-category="suv" data-brand="giti" data-id="6">
+                    <div class="product-badge" data-i18n="products.badge.new">New</div>
+                    <div class="product-image">
+                        <img src="https://www.giti.com.vn/storage/images/tires/AT70/AT70_30%20Degrees_500x625.png" alt="Giti Giti4x4 HT70" loading="lazy">
+                        <div class="product-overlay">
+                            <button class="btn-quick-view" data-id="6">
+                                <i class="fas fa-eye"></i> <span data-i18n="products.quickview">Quick View</span>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-title">Giti4×4 AT70</h3>
+                        <p class="product-description" data-i18n="products.description.6">Ban highway-terrain untuk SUV dengan performa optimal di jalan raya dan kenyamanan maksimal. Desain tread yang seimbang untuk kenyamanan dan performa.</p>
+                        <div class="product-specs">
+                            <div class="spec-item">
+                                <i class="fas fa-road"></i>
+                                <span data-i18n="products.specs.highway">Highway</span>
+                            </div>
+                            <div class="spec-item">
+                                <i class="fas fa-volume-down"></i>
+                                <span data-i18n="products.specs.quiet">Rendah Bising</span>
+                            </div>
+                            <div class="spec-item">
+                                <i class="fas fa-couch"></i>
+                                <span data-i18n="products.specs.comfort">Nyaman</span>
+                            </div>
+                        </div>
+                        <div class="product-price">
+                            <span class="price">Rp 1.150.000</span>
+                            <span class="price-old">Rp 1.350.000</span>
+                        </div>
+                        <div class="product-actions">
+                            <button class="btn-beli" data-id="6" data-i18n="products.buy">Beli Sekarang</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 7 -->
+                <div class="product-card" data-category="passenger" data-brand="irc" data-id="7">
+                    <div class="product-badge" data-i18n="products.badge.performance">Performance</div>
+                    <div class="product-image">
+                        <img src="https://ledengmotor.com/wp-content/uploads/BAN0236-IRC-BANTYPE-70.90-17-NR96-ECOTRAX.webp" alt="IRC XGOLD XFIT SX2" loading="lazy">
+                        <div class="product-overlay">
+                            <button class="btn-quick-view" data-id="7">
+                                <i class="fas fa-eye"></i> <span data-i18n="products.quickview">Quick View</span>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-title">IRC ECOTRAX NR96</h3>
+                        <p class="product-description" data-i18n="products.description.7">Ban khusus performa tinggi dengan traksi superior di kondisi basah dan kering. Dilengkapi teknologi khusus untuk meningkatkan grip di segala kondisi.</p>
+                        <div class="product-specs">
+                            <div class="spec-item">
+                                <i class="fas fa-tachometer-alt"></i>
+                                <span data-i18n="products.specs.highspeed">High Speed</span>
+                            </div>
+                            <div class="spec-item">
+                                <i class="fas fa-hand-rock"></i>
+                                <span data-i18n="products.specs.highgrip">Grip Tinggi</span>
+                            </div>
+                            <div class="spec-item">
+                                <i class="fas fa-shield-alt"></i>
+                                <span data-i18n="products.specs.safety">Safety</span>
+                            </div>
+                        </div>
+                        <div class="product-price">
+                            <span class="price">Rp 259.000</span>
+                            <span class="price-old">Rp 274.500</span>
+                        </div>
+                        <div class="product-actions">
+                            <button class="btn-beli" data-id="7" data-i18n="products.buy">Beli Sekarang</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 8 -->
+                <div class="product-card" data-category="truck" data-brand="zeneos" data-id="8">
+                    <div class="product-badge" data-i18n="products.badge.durable">Tahan Lama</div>
+                    <div class="product-image">
+                        <img src="https://www.static-src.com/wcsstore/Indraprastha/images/catalog/full//93/MTA-2976312/zeneos_zeneos-zn-62-rs-160--60-r17-ban-motor_full04.jpg" alt="Zeneos HD Pro" loading="lazy">
+                        <div class="product-overlay">
+                            <button class="btn-quick-view" data-id="8">
+                                <i class="fas fa-eye"></i> <span data-i18n="products.quickview">Quick View</span>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-title">Zeneos ZN62RS</h3>
+                        <p class="product-description" data-i18n="products.description.8">Peningkatan daya cengkeram dan kestabilan dengan tread compound & konstruksi terbaru bagi pengendara motor sport yang menginginkan pengalaman berkendara</p>
+                        <div class="product-specs">
+                            <div class="spec-item">
+                                <i class="fas fa-truck-loading"></i>
+                                <span data-i18n="products.specs.heavyduty">Heavy Duty</span>
+                            </div>
+                            <div class="spec-item">
+                                <i class="fas fa-calendar-alt"></i>
+                                <span data-i18n="products.specs.durable">Tahan Lama</span>
+                            </div>
+                        </div>
+                        <div class="product-price">
+                            <span class="price">Rp 800.000</span>
+                            <span class="price-old">Rp 869.000</span>
+                        </div>
+                        <div class="product-actions">
+                            <button class="btn-beli" data-id="8" data-i18n="products.buy">Beli Sekarang</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 9 -->
+                <div class="product-card" data-category="passenger" data-brand="irc" data-id="9">
+                    <div class="product-badge" data-i18n="products.badge.performance">Performance</div>
+                    <div class="product-image">
+                        <img src="https://www.gt-tires.com/bias_photo/IndonesiaTireHiRes30_2021319104758.jpg" alt="IRC FASTI 1 Series" loading="lazy">
+                        <div class="product-overlay">
+                            <button class="btn-quick-view" data-id="9">
+                                <i class="fas fa-eye"></i> <span data-i18n="products.quickview">Quick View</span>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-title">IRC FASTI 1 Series</h3>
+                        <p class="product-description" data-i18n="products.description.9">Ban balap dengan pola slick dipadu dengan konstruksi ARAMID / Kevlar yang menjamin kestabilan performa untuk kondisi kering pada saat kompetisi.</p>
+                        <div class="product-specs">
+                            <div class="spec-item">
+                                <i class="fas fa-tachometer-alt"></i>
+                                <span data-i18n="products.specs.highspeed">High Speed</span>
+                            </div>
+                            <div class="spec-item">
+                                <i class="fas fa-hand-rock"></i>
+                                <span data-i18n="products.specs.highgrip">Grip Tinggi</span>
+                            </div>
+                            <div class="spec-item">
+                                <i class="fas fa-shield-alt"></i>
+                                <span data-i18n="products.specs.safety">Safety</span>
+                            </div>
+                        </div>
+                        <div class="product-price">
+                            <span class="price">Rp 809.000</span>
+                            <span class="price-old">Rp 843.500</span>
+                        </div>
+                        <div class="product-actions">
+                            <button class="btn-beli" data-id="9" data-i18n="products.buy">Beli Sekarang</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="load-more-container">
+                <button class="btn-load-more" id="btn-load-more">
+                    <span data-i18n="products.loadmore">Muat Lebih Banyak</span>
+                    <i class="fas fa-chevron-down"></i>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Teknologi Section -->
+    <section class="technology-section" id="teknologi">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title" data-i18n="technology.title">Teknologi GajahGrip</h2>
+                <p class="section-subtitle" data-i18n="technology.subtitle">Inovasi terdepan dalam teknologi ban untuk performa maksimal di segala kondisi</p>
+            </div>
+            
+            <div class="technology-showcase">
+                <!-- Technology 1 -->
+                <div class="tech-item">
+                    <div class="tech-visual">
+                        <div class="tech-animation" id="tech-animation-1">
+                            <div class="realistic-tire">
+                                <div class="tire-sidewall">
+                                    <div class="tire-brand">GajahGrip</div>
+                                </div>
+                                <div class="tire-tread">
+                                    <div class="tread-block"></div>
+                                    <div class="tread-block"></div>
+                                    <div class="tread-block"></div>
+                                    <div class="tread-block"></div>
+                                    <div class="tread-block"></div>
+                                    <div class="tread-block"></div>
+                                </div>
+                                <div class="tire-rim">
+                                    <div class="rim-center"></div>
+                                    <div class="rim-spoke"></div>
+                                    <div class="rim-spoke"></div>
+                                    <div class="rim-spoke"></div>
+                                    <div class="rim-spoke"></div>
+                                    <div class="rim-spoke"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tech-content">
+                        <h3 data-i18n="technology.tech1.title">Dual Compound Technology</h3>
+                        <p data-i18n="technology.tech1.description">Teknologi kompon ganda yang memberikan keseimbangan sempurna antara daya cengkeram dan keawetan. Bagian luar menggunakan kompon lembut untuk traksi maksimal, sementara bagian dalam menggunakan kompon keras untuk ketahanan jarak tempuh yang lebih panjang.</p>
+                        <ul class="tech-features">
+                            <li><i class="fas fa-check"></i> <span data-i18n="technology.tech1.feature1">Traksi 30% lebih baik di kondisi basah</span></li>
+                            <li><i class="fas fa-check"></i> <span data-i18n="technology.tech1.feature2">Keawetan meningkat 25%</span></li>
+                            <li><i class="fas fa-check"></i> <span data-i18n="technology.tech1.feature3">Penghematan bahan bakar hingga 5%</span></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Technology 2 -->
+                <div class="tech-item reverse">
+                    <div class="tech-visual">
+                        <div class="tech-animation" id="tech-animation-2">
+                            <div class="realistic-tire">
+                                <div class="tire-sidewall">
+                                    <div class="tire-brand">SilicaTech</div>
+                                </div>
+                                <div class="tire-tread">
+                                    <div class="tread-block"></div>
+                                    <div class="tread-block"></div>
+                                    <div class="tread-block"></div>
+                                    <div class="tread-block"></div>
+                                    <div class="tread-block"></div>
+                                    <div class="tread-block"></div>
+                                </div>
+                                <div class="tire-rim">
+                                    <div class="rim-center"></div>
+                                    <div class="rim-spoke"></div>
+                                    <div class="rim-spoke"></div>
+                                    <div class="rim-spoke"></div>
+                                    <div class="rim-spoke"></div>
+                                    <div class="rim-spoke"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tech-content">
+                        <h3 data-i18n="technology.tech2.title">Silica-Enhanced Tread</h3>
+                        <p data-i18n="technology.tech2.description">Polimer silica dalam kompon karet meningkatkan fleksibilitas pada suhu rendah, memberikan traksi superior di kondisi basah dan bersalju. Teknologi ini mengurangi jarak pengereman hingga 10% dibandingkan ban konvensional.</p>
+                        <ul class="tech-features">
+                            <li><i class="fas fa-check"></i> <span data-i18n="technology.tech2.feature1">Jarak pengereman lebih pendek 10%</span></li>
+                            <li><i class="fas fa-check"></i> <span data-i18n="technology.tech2.feature2">Performa optimal di kondisi basah</span></li>
+                            <li><i class="fas fa-check"></i> <span data-i18n="technology.tech2.feature3">Stabilitas tinggi pada kecepatan tinggi</span></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Technology 3 -->
+                <div class="tech-item">
+                    <div class="tech-visual">
+                        <div class="tech-animation" id="tech-animation-3">
+                            <div class="realistic-tire">
+                                <div class="tire-sidewall">
+                                    <div class="tire-brand">StabilPro</div>
+                                </div>
+                                <div class="tire-tread">
+                                    <div class="tread-block"></div>
+                                    <div class="tread-block"></div>
+                                    <div class="tread-block"></div>
+                                    <div class="tread-block"></div>
+                                    <div class="tread-block"></div>
+                                    <div class="tread-block"></div>
+                                </div>
+                                <div class="tire-rim">
+                                    <div class="rim-center"></div>
+                                    <div class="rim-spoke"></div>
+                                    <div class="rim-spoke"></div>
+                                    <div class="rim-spoke"></div>
+                                    <div class="rim-spoke"></div>
+                                    <div class="rim-spoke"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tech-content">
+                        <h3 data-i18n="technology.tech3.title">Stabilizing Ribs Technology</h3>
+                        <p data-i18n="technology.tech3.description">Desain rusuk penstabil pada dinding samping ban meningkatkan stabilitas berkendara dan responsivitas kemudi. Teknologi ini mengurangi gaya samping saat menikung, memberikan kontrol yang lebih presisi dan rasa aman yang lebih tinggi.</p>
+                        <ul class="tech-features">
+                            <li><i class="fas fa-check"></i> <span data-i18n="technology.tech3.feature1">Stabilitas meningkat 20%</span></li>
+                            <li><i class="fas fa-check"></i> <span data-i18n="technology.tech3.feature2">Respons kemudi lebih langsung</span></li>
+                            <li><i class="fas fa-check"></i> <span data-i18n="technology.tech3.feature3">Kenyamanan berkendara lebih baik</span></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimoni Section -->
+    <section class="testimonials-section" id="testimoni">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title" data-i18n="testimonials.title">Apa Kata Pelanggan Kami?</h2>
+                <p class="section-subtitle" data-i18n="testimonials.subtitle">Testimoni jujur dari pengguna GajahGrip di seluruh Indonesia</p>
+            </div>
+            
+            <div class="testimonials-slider swiper" id="testimonials-slider">
+                <div class="swiper-wrapper">
+                    <!-- Testimonial 1 -->
+                    <div class="swiper-slide">
+                        <div class="testimonial-card">
+                            <div class="testimonial-content">
+                                <div class="rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                                <p data-i18n="testimonials.testimonial1">"Ban GajahGrip GitiControl P10 sangat nyaman dan hemat bahan bakar. Sudah 2 tahun digunakan dan masih bagus. Pelayanannya juga sangat memuaskan!"</p>
+                            </div>
+                            <div class="testimonial-author">
+                                <div class="author-avatar">
+                                    <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Ahmad Rizki" loading="lazy">
+                                </div>
+                                <div class="author-info">
+                                    <h4>Ahmad Rizki</h4>
+                                    <span data-i18n="testimonials.location1">Jakarta</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Testimonial 2 -->
+                    <div class="swiper-slide">
+                        <div class="testimonial-card">
+                            <div class="testimonial-content">
+                                <div class="rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                                <p data-i18n="testimonials.testimonial2">"GajahGrip CHAMPIRO SX-R sangat tangguh di medan off-road. Cocok untuk adventure ke daerah terpencil. Traksinya mantap di segala medan. Recommended!"</p>
+                            </div>
+                            <div class="testimonial-author">
+                                <div class="author-avatar">
+                                    <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Sari Dewi" loading="lazy">
+                                </div>
+                                <div class="author-info">
+                                    <h4>Sari Dewi</h4>
+                                    <span data-i18n="testimonials.location2">Bandung</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Testimonial 3 -->
+                    <div class="swiper-slide">
+                        <div class="testimonial-card">
+                            <div class="testimonial-content">
+                                <div class="rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                                <p data-i18n="testimonials.testimonial3">"Ban GajahGrip untuk truk saya sangat awet dan tahan lama. Sudah 3 tahun dipakai setiap hari dengan beban berat, masih bagus dan aman."</p>
+                            </div>
+                            <div class="testimonial-author">
+                                <div class="author-avatar">
+                                    <img src="https://randomuser.me/api/portraits/men/76.jpg" alt="Budi Santoso" loading="lazy">
+                                </div>
+                                <div class="author-info">
+                                    <h4>Budi Santoso</h4>
+                                    <span data-i18n="testimonials.location3">Surabaya</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-pagination"></div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+            </div>
+        </div>
+    </section>
+
+<!-- Tentang Section -->
+    <section class="about-section" id="tentang">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-text">
+                    <h2 data-i18n="about.title">Tentang GajahGrip</h2>
+                    <p data-i18n="about.description1">GajahGrip didirikan pada tahun 2005 dengan misi menyediakan ban berkualitas tinggi dengan harga terjangkau untuk masyarakat Indonesia. Dengan pengalaman lebih dari 15 tahun dalam industri ban, kami telah berkembang menjadi salah satu merek ban terpercaya di tanah air.</p>
+                    <p data-i18n="about.description2">Komitmen kami terhadap inovasi dan kualitas telah menghasilkan berbagai penghargaan industri, termasuk "Best Tire Brand" pada Indonesia Automotive Awards 2022. Setiap produk GajahGrip dirancang dengan mempertimbangkan kondisi jalan Indonesia yang beragam, dari jalan perkotaan hingga medan terpencil.</p>
+                    <div class="about-stats">
+                        <div class="about-stat">
+                            <span class="stat-number" data-count="15">0</span>
+                            <span class="stat-label" data-i18n="about.stat1">Tahun Pengalaman</span>
+                        </div>
+                        <div class="about-stat">
+                            <span class="stat-number" data-count="500">0</span>
+                            <span class="stat-label" data-i18n="about.stat2">Ribuan Pelanggan</span>
+                        </div>
+                        <div class="about-stat">
+                            <span class="stat-number" data-count="50">0</span>
+                            <span class="stat-label" data-i18n="about.stat3">Penghargaan</span>
+                        </div>
+                        <div class="about-stat">
+                            <span class="stat-number" data-count="100">0</span>
+                            <span class="stat-label" data-i18n="about.stat4">Kota Terjangkau</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-visual">
+                    <div class="about-image">
+                        <div class="image-frame">
+                            <img src="https://www.gt-tires.com/wp-content/uploads/2023/09/42.jpg" alt="Pabrik GajahGrip" loading="lazy">
+                        </div>
+                        <div class="experience-badge">
+                            <span>15+</span>
+                            <span data-i18n="about.badge">Tahun Pengalaman</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    
+<!-- Footer yang lebih lengkap -->
+    <footer class="main-footer" id="kontak">
+        <div class="container">
+            <div class="footer-content">
+                <!-- Company Info & Newsletter -->
+                <div class="footer-section company-info">
+                    <div class="footer-logo">
+                        <div class="logo-icon">
+                            <i class="fas fa-paw"></i>
+                        </div>
+                        <h2>GajahGrip</h2>
+                    </div>
+                    <p class="company-description" data-i18n="footer.description">Penyedia ban berkualitas tinggi dengan teknologi terdepan untuk semua jenis kendaraan. Keamanan dan kenyamanan Anda adalah prioritas kami.</p>
+                    
+                    <div class="footer-newsletter">
+                        <h4 data-i18n="footer.newsletter.title">Berlangganan Newsletter</h4>
+                        <p data-i18n="footer.newsletter.subtitle">Dapatkan info promo dan tips perawatan ban</p>
+                        <div class="newsletter-form">
+                            <input type="email" placeholder="Email Anda" class="newsletter-input" data-i18n-placeholder="footer.newsletter.placeholder">
+                            <button class="newsletter-btn">
+                                <i class="fas fa-paper-plane"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="social-links">
+                        <a href="#" class="social-link" title="Facebook">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="social-link" title="Twitter">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="social-link" title="Instagram">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="social-link" title="YouTube">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                        <a href="#" class="social-link" title="LinkedIn">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Quick Links Grid -->
+                <div class="footer-links-grid">
+                    <!-- Produk -->
+                    <div class="footer-section">
+                        <h3 data-i18n="footer.products.title">Produk Kami</h3>
+                        <ul class="footer-links">
+                            <li><a href="#produk"><i class="fas fa-chevron-right"></i> <span data-i18n="footer.products.link1">Ban Penumpang</span></a></li>
+                            <li><a href="#produk"><i class="fas fa-chevron-right"></i> <span data-i18n="footer.products.link2">Ban SUV & MPV</span></a></li>
+                            <li><a href="#produk"><i class="fas fa-chevron-right"></i> <span data-i18n="footer.products.link3">Ban Truk & Bus</span></a></li>
+                            <li><a href="#produk"><i class="fas fa-chevron-right"></i> <span data-i18n="footer.products.link4">Ban Performance</span></a></li>
+                            <li><a href="#produk"><i class="fas fa-chevron-right"></i> <span data-i18n="footer.products.link5">Ban All-Terrain</span></a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Layanan -->
+                    <div class="footer-section">
+                        <h3 data-i18n="footer.services.title">Layanan</h3>
+                        <ul class="footer-links">
+                            <li><a href="#"><i class="fas fa-chevron-right"></i> <span data-i18n="footer.services.link1">Pemasangan Ban</span></a></li>
+                            <li><a href="#"><i class="fas fa-chevron-right"></i> <span data-i18n="footer.services.link2">Spooring & Balancing</span></a></li>
+                            <li><a href="#"><i class="fas fa-chevron-right"></i> <span data-i18n="footer.services.link3">Konsultasi Ban</span></a></li>
+                            <li><a href="#"><i class="fas fa-chevron-right"></i> <span data-i18n="footer.services.link4">Servis Kendaraan</span></a></li>
+                            <li><a href="#"><i class="fas fa-chevron-right"></i> <span data-i18n="footer.services.link5">Emergency Service</span></a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Bantuan -->
+                    <div class="footer-section">
+                        <h3 data-i18n="footer.help.title">Bantuan</h3>
+                        <ul class="footer-links">
+                            <li><a href="#"><i class="fas fa-chevron-right"></i> <span data-i18n="footer.help.link1">FAQ</span></a></li>
+                            <li><a href="#"><i class="fas fa-chevron-right"></i> <span data-i18n="footer.help.link2">Panduan Ukuran Ban</span></a></li>
+                            <li><a href="#"><i class="fas fa-chevron-right"></i> <span data-i18n="footer.help.link3">Tips Perawatan Ban</span></a></li>
+                            <li><a href="#"><i class="fas fa-chevron-right"></i> <span data-i18n="footer.help.link4">Syarat & Ketentuan</span></a></li>
+                            <li><a href="#"><i class="fas fa-chevron-right"></i> <span data-i18n="footer.help.link5">Kebijakan Privasi</span></a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Contact Info -->
+                <div class="footer-section contact-info">
+                    <h3 data-i18n="footer.contact.title">Kontak Kami</h3>
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div class="contact-text">
+                                <p>Jl. Raya Kembangan No. 123</p>
+                                <p data-i18n="footer.contact.address">Jakarta Barat 11630</p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-phone"></i>
+                            </div>
+                            <div class="contact-text">
+                                <p>(021) 5567-8899</p>
+                                <p>+62 812-3456-7890</p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div class="contact-text">
+                                <p>info@gajahgrip.co.id</p>
+                                <p>sales@gajahgrip.co.id</p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-clock"></i>
+                            </div>
+                            <div class="contact-text">
+                                <p><strong data-i18n="footer.contact.hours.title">Senin - Minggu</strong></p>
+                                <p data-i18n="footer.contact.hours.time">08.00 - 22.00 WIB</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="payment-methods">
+                        <h4 data-i18n="footer.payment.title">Metode Pembayaran</h4>
+                        <div class="payment-icons">
+                            <i class="fab fa-cc-visa" title="Visa"></i>
+                            <i class="fab fa-cc-mastercard" title="Mastercard"></i>
+                            <i class="fab fa-cc-paypal" title="PayPal"></i>
+                            <i class="fas fa-university" title="Transfer Bank"></i>
+                            <i class="fas fa-money-bill-wave" title="Tunai"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Footer Bottom -->
+            <div class="footer-bottom">
+                <div class="footer-bottom-content">
+                    <p>&copy; 2025 GajahGrip. All Rights Reserved. | <span data-i18n="footer.bottom">Developed with</span> <i class="fas fa-heart" style="color: var(--primary-color); "></i> <span data-i18n="footer.bottom2">for Better Driving Experience</span></p>
+                    <div class="footer-bottom-links">
+                        <a href="#" data-i18n="footer.bottomlink1">Sitemap</a>
+                        <a href="#" data-i18n="footer.bottomlink2">Privacy Policy</a>
+                        <a href="#" data-i18n="footer.bottomlink3">Terms of Service</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Quick View Modal -->
+    <div class="modal quick-view-modal" id="quickViewModal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <div class="modal-body" id="modal-body">
+                <!-- Modal content will be generated by JavaScript -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Back to Top Button -->
+    <button class="back-to-top" id="back-to-top">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
